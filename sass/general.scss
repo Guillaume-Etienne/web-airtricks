@@ -1,7 +1,7 @@
 @import "./variables";
 @import "./animations";
 
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Josefin+Sans&family=Rambla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Josefin+Sans:wght@100&family=Rambla&display=swap');
 
 html{
     scroll-behavior: smooth;
@@ -36,7 +36,79 @@ li{
     margin: 0 auto;
     justify-content: space-between;
 }
+header{
+    text-align: center;
+    // height: 100%;
+    height: 100vh;
+    // prend toute la hauteur de la page du navigateur
+    background: url(../media/header.jpg) no-repeat fixed 50% 50%;
+    background-size: cover;
+    // ajuste un peu la photo de fond     
+}
+h1{
+    padding: 90px 0 10px 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 4.3em;
+    text-transform: uppercase;
+}
 
+#line{
+    height: 1px;
+    background-color: #b3aca7;
+    width: 25%;
+    margin: 0 auto;    
+}
+h2{
+    padding: 20px 0 50px 0;
+    font-size: 3em;
+    text-transform: uppercase;
+}
+.presentation{
+    height: 240px;
+    margin-top: 20px;
+}
+.infos{
+    border: 1px solid #b3aca7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+// .photo {
+//     border: 1px solid #b3aca7;
+//     position: relative;    
+// }
+// .photo img {
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     margin: auto;
+//     height: auto;
+// }
+
+.photo{
+    border: 1px solid #b3aca7;
+    display: flex;    
+}
+.photo img{    
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    max-width: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 4px #111;
+}
+header .button{
+    margin-top: 45px;    
+}
+header .button a{
+    padding: 20px 80px;
+    border: 1px solid #b3aca7;
+    width: 300px;
+    }
 // 32.50 
 
 // hallucinant : après plusieurs manip, le responsive ne fonctionne qu'en important ici ci-dessous
