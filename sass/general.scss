@@ -1,0 +1,44 @@
+@import "./variables";
+@import "./animations";
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Josefin+Sans&family=Rambla&display=swap');
+
+html{
+    scroll-behavior: smooth;
+    // rend le scroll fluide sur la page
+}
+body{
+    color: #283655 !important;
+    // important : met en avance ce style (comparé à la masse de styles de bootstrap)
+    background-color: #f7faff !important;
+    font-family: 'Rambla', sans-serif;
+}
+h2, h3{
+    font-family: 'Audiowide', sans-serif;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-shadow:  -1px -1px 1px #283655;
+}
+li{
+    list-style: none;
+}
+
+// ************************* HEADER ***************************
+
+.navbar {
+    background-color: #FAFAFA;    
+    opacity: 0.9;
+    height: 42px;
+    transition: 0.7s;    
+}
+.navbar-nav {
+    width: 80% !important;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+// 32.50 
+
+// hallucinant : après plusieurs manip, le responsive ne fonctionne qu'en important ici ci-dessous
+@import "./desktopresponsive";
+
