@@ -3,6 +3,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Josefin+Sans:wght@100&family=Rambla&display=swap');
 
+// ************** Général
+// ************** header
+// ************** langage
+
+
 html{
     scroll-behavior: smooth;
     // rend le scroll fluide sur la page
@@ -39,7 +44,7 @@ li{
 header{
     text-align: center;
     // height: 100%;
-    height: 100vh;
+    height: 80vh;
     // prend toute la hauteur de la page du navigateur
     background: url(../media/header.jpg) no-repeat fixed 50% 50%;
     background-size: cover;
@@ -114,6 +119,23 @@ header .button{
             text-decoration: none;
         }
     }   
+}
+
+// ************************* Langages ***************************
+#langages{
+    padding: 80px 110px 80px 50px;
+    margin: 120px 0 0 6%;
+    height: 620px;
+    width: 47%;
+    max-width: 640px;
+    // Pour les gradients, on utilisera cssgenerator.org 
+    background: linear-gradient(115deg,#eeed64 0%, rgba(200,38,180,0.47) 40%, rgba(89,155,223,0.48) 80%);
+    // pour la forme spécific, un autre générateur : https://bennettfeely.com/clippy/ 
+    clip-path: polygon(0 7%, 100% 0%, 83% 100%, 0 94%);
+    & .bar{
+        padding: 10px 0 4px 0;
+        letter-spacing: 0.1em;
+    }
 }
 
 // 45.45 
