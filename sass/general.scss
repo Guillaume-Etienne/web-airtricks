@@ -10,7 +10,7 @@ html{
 body{
     color: #283655 !important;
     // important : met en avance ce style (comparé à la masse de styles de bootstrap)
-    background-color: #f7faff !important;
+    background-color: $colorbackground !important;
     font-family: 'Rambla', sans-serif;
 }
 h2, h3{
@@ -26,7 +26,7 @@ li{
 // ************************* HEADER ***************************
 
 .navbar {
-    background-color: #FAFAFA;    
+    background-color: $colorbackmenu;    
     opacity: 0.9;
     height: 42px;
     transition: 0.7s;    
@@ -54,7 +54,7 @@ h1{
 
 #line{
     height: 1px;
-    background-color: #b3aca7;
+    background-color: $colorline;
     width: 25%;
     margin: 0 auto;    
 }
@@ -68,7 +68,7 @@ h2{
     margin-top: 20px;
 }
 .infos{
-    border: 1px solid #b3aca7;
+    border: 1px solid $colorline;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -89,7 +89,7 @@ h2{
 // }
 
 .photo{
-    border: 1px solid #b3aca7;
+    border: 1px solid $colorline;
     display: flex;    
 }
 .photo img{    
@@ -102,14 +102,21 @@ h2{
     box-shadow: 0 0 4px #111;
 }
 header .button{
-    margin-top: 45px;    
+    margin-top: 45px;
+    & a{
+        padding: 20px 80px;
+        border: 1px solid $colorline;
+        width: 300px;
+        &:hover{
+            background-color: $colorline;
+            color: $colorlinkhover;
+            transition:all 0.3s ease-in-out;
+            text-decoration: none;
+        }
+    }   
 }
-header .button a{
-    padding: 20px 80px;
-    border: 1px solid #b3aca7;
-    width: 300px;
-    }
-// 32.50 
+
+// 45.45 
 
 // hallucinant : après plusieurs manip, le responsive ne fonctionne qu'en important ici ci-dessous
 @import "./desktopresponsive";
