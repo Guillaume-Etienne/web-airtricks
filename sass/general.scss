@@ -6,6 +6,7 @@
 // ************** Général
 // ************** header
 // ************** langage
+// ************** formation
 
 
 html{
@@ -137,7 +138,52 @@ header .button{
         letter-spacing: 0.1em;
     }
 }
+// ************************* Formation ***************************
+#formation{
+    position: relative;
+    top: -200px;
+    float: right;
+    margin-right: 5%;
+    padding: 100px 0 60px 50px;
+    width: 45%;
+    max-width: 660px;
+    background: linear-gradient(19deg, rgba(0,180,219,0.69) 0%, #0083b0 80%);
+    clip-path: polygon(0 12%, 100% 0%, 100% 100%, 0 91%);
+    & h4{
+        font-weight: bold;
+        letter-spacing: 0.08em;
+        padding-bottom: 10px;
+        color:$colorprimary ;
+        text-shadow: -1px -1px 1px $colorprimaryshadow;
+    }
+}
+#autodidacte{
+    padding-top: 20px;
+}
+#fcc{
+    padding: 50px 0 0 9%;
+}
+#occ{
+    padding: 50px 0 0 18%;
+}
 
+.counter {
+    display: flex;
+    text-align: center;
+}
+.data{
+    border: 1px solid $colorprimaryshadow;
+    width: 170px;
+    margin: 0 4%;
+    box-shadow: 0 0 8px $colorshadow1;
+    padding: 5px 20px;
+}
+.counter-value{
+    font-size: 2em;
+}
+.data-span{
+    font-size: 1.8em;
+}
 // 45.45 
 
 // hallucinant : après plusieurs manip, le responsive ne fonctionne qu'en important ici ci-dessous

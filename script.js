@@ -1,5 +1,6 @@
 //NAVBAR : faire disparaitre la navbar au scroll
 //typed : pour faire apparaitre et disparaitre du texte
+//COMPTEUR LIVE : pour animer les compteurs des formations
 
 //NAVBAR
 let lastScrollTop = 0
@@ -23,4 +24,35 @@ var typed = new Typed('.typed', {
     smartBackspace: true, // Default value
     typeSpeed : 20,
     loop:false
-  });
+    });
+
+// COMPTEUR LIVE 
+let compteur = 0 // variable qui sert uniquement à ne lancer qu'une seule fois la fonction
+
+$(window).scroll(function(){
+
+    const top = $('.counter').offset().top - window.innerHeight
+
+    if (compteur == 0 && $(window).scrollTop() > top) {
+        $('.counter-value').each(function() {
+            let $this = $(this),
+                countTo = $this.attr('data-count') //va chercher dans le HTML le total à atteindre
+            $({
+                countNum: $this.text()
+            }).animate({
+                countNum : countTo
+            },
+            {
+                duration: 5000,
+                easing :'swing',
+                step: function(){
+                   $this.text(Math.floor(this.countNum)) 
+                },
+                complete: function(){
+                    $this.text(this.countNum)
+                }
+            })
+        })
+        compteur = 1
+    }
+})
