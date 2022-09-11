@@ -7,6 +7,7 @@
 // ************** header
 // ************** langage
 // ************** formation
+// ************** Parcours
 
 
 html{
@@ -184,7 +185,69 @@ header .button{
 .data-span{
     font-size: 1.8em;
 }
-// 45.45 
+
+// ************************* Parcours ***************************
+#parcours {
+    max-width: 800px;
+    margin: 640px auto 180px auto;
+    padding: 40px 30px 100px 30px;
+    background: url(/media/parcours.jpg) no-repeat fixed 50% 50%; //fixé dans le fond (effet défilement) et centré
+    background-size: cover; //pour ne pas qu'elle se répète et occupe bien l'espace (?)
+    border-radius: 8px;
+    box-shadow: -1px -1px 8px $colorshadowparcours;
+    & h3{
+        font-size: 2.5em;
+        padding-bottom: 30px;
+    }
+    & h4{
+        font-size: 1.6em;
+        color: $colorh4parcours;
+        margin-left: 20px;
+    }
+    & h6{
+        font-style: italic;
+        color: $colorh6parcours;
+        margin-left: 20px;
+    }
+    & p{
+        line-height: 1.9em; //pour espacer un peu les lignes
+    }
+}
+.timeline{
+    border-top: 3px solid;
+    border-image: linear-gradient(to right, $colorh6parcours, $colorh4parcours );
+    border-image-slice: 1; // n'apparaît pas sans ça. Cette propriété permet de séparer le contenu des border
+    margin: 0;
+    padding: 40px;
+    position: relative;
+    &:nth-child(1):after{ //appel le premier enfant des timeline et ajoute qq chose. le CSS peut ajouter du texte       
+        content: '▲'; //alt 30
+        color: $colorh4parcours;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        box-sizing: content-box !important;        
+    }
+    &:nth-child(1){
+        border-bottom: 3px solid;
+        // border-right: 3px solid; pas besoin puisque traité en "odd" plus bas
+        border-top: none;
+        width: 80%;
+    }
+    &:nth-child(2){
+        border-top: none;        
+    }
+    &:nth-child(odd){  //impair : odd pair : even
+        border-right: 3px solid;
+        padding-left: 0;
+    }
+    &:nth-child(even){
+        border-left: 3px solid;
+        padding-right: 0;
+    }
+}
+
+// 2h24
 
 // hallucinant : après plusieurs manip, le responsive ne fonctionne qu'en important ici ci-dessous
 @import "./desktopresponsive";

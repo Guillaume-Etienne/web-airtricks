@@ -1,6 +1,12 @@
 //NAVBAR : faire disparaitre la navbar au scroll
-//typed : pour faire apparaitre et disparaitre du texte
+//typed : pour faire apparaitre et disparaitre du texte / Librairie typed.js
 //COMPTEUR LIVE : pour animer les compteurs des formations
+//Animations des éléments à l'apparition : 
+
+// *************** libraies : **************
+// compteur : typed.js
+// Apparaitre les éléments : aos  : https://michalsnik.github.io/aos/
+
 
 //NAVBAR
 let lastScrollTop = 0
@@ -43,7 +49,7 @@ $(window).scroll(function(){
                 countNum : countTo
             },
             {
-                duration: 5000,
+                duration: 4000,
                 easing :'swing',
                 step: function(){
                    $this.text(Math.floor(this.countNum)) 
@@ -56,3 +62,10 @@ $(window).scroll(function(){
         compteur = 1
     }
 })
+
+//Animations des éléments à l'apparition : 
+AOS.init();
+
+
+
+// video 1 2h24.  en gros
