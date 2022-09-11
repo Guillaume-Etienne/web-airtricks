@@ -8,6 +8,7 @@
 // ************** langage
 // ************** formation
 // ************** Parcours
+// ************** Portfolio
 
 
 html{
@@ -247,8 +248,63 @@ header .button{
     }
 }
 
-// 2h24
+// ************** Portfolio ****************************
+#portfolio{
+    margin: 0 2% 0 2%;
+    padding: 20px 10px 60px 40px;
+    background-color: $colorbackgroundportfolio;
+    box-shadow: 0px 0px 1px $colorline;
+    & h3{
+        font-size: 3em;
+        padding-bottom: 15px;        
+    }
+    // & img{
+    //     max-width: 300px;      //temporaire Guigui ça
+    // }
+}
+.projet {
+    display: flex;
+    &:nth-child(2){
+        margin-left: 3%;
+    }
+    &:nth-child(3){
+        margin-left: 6%;
+    }
+}
+.cadre{
+    position: relative;
+    padding: 40px 20px 25px 0;
+    width: 60%;
+    max-width: 600px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin: 10px 8px;
+    color: $colorline;
+    text-align: center;
+}
+.img-container {
+    height: 250px;
+    width: 90%;
+    max-width: 500px;
+    overflow: hidden; //tout ce qui dépasse sera caché
+    margin: 0 auto;
+    box-shadow: 1px 1px 10px #111;
+    & img {
+        position: relative;
+        height: 100%;
+        margin: 0 auto;        
+    }
+    &:hover img {
+        transform: scale(1.07);        
+        transform-origin: 50% 50%;
+        filter: contrast(140%);
+        transition: 0.3s ease-in-out ;
+    }
+}
 
+
+// Vid 2 : 0h21min
 // hallucinant : après plusieurs manip, le responsive ne fonctionne qu'en important ici ci-dessous
 @import "./desktopresponsive";
 
