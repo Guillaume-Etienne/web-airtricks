@@ -11,6 +11,7 @@
 // ************** Portfolio
 // ************** Other (skills)
 // ************** Hobbies
+// ************** Footer
 
 
 html{
@@ -387,10 +388,86 @@ header .button{
     padding: 250px 50px 100px 50px;
     margin: -300px 0 -90px 0;
     clip-path: polygon(0 21%, 100% 31%, 100% 95%, 0 100%);
+    background: $colorh6parcours;
+    & h3{
+        transform: rotate(4.2deg);
+        font-size: 3em;
+        text-shadow: -1px 1px 0px $colorbackgroundotherskills;
+    }
+}
+.pictures {
+    display: flex;
+    justify-content: center;
+}
+
+//à partir d'ici le CSS n'est pas vraiment dans le bon ordre pour 
+// resultat + visible à l'écran au fur età mesure du dev
+.flip-box-back{
+    color: white;
+    transform: rotateY(180deg);
+    & div {
+        margin: 0 auto;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+    }
+    & p{
+        text-transform: uppercase;
+        padding: 10px;
+        font-size-adjust: auto; 
+    }    
+} 
+.flip-box-front, .flip-box-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.flip-box {
+    overflow: hidden;
+    background-color: transparent;
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    perspective: 200px;
+}
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-box:hover .flip-box-inner{   //lorsque hover sur flip-box, on agit sur ...inner
+    transform: rotateY(180deg);
 }
 
 
+// ************** Hobbies ****************************
 
+footer{
+    background: url(../media/footer.jpg) 50% 0% no-repeat fixed;
+    background-size: cover; //toujours mettre si options ce-dessus
+    text-align: center;
+    padding: 160px 50px 5;
+    & h3{
+        padding: 0 0 60px 0;
+        font-size: 2.5em;        
+    }
+}
+.footer-icons{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 60%;
+}
+.network {
+    font-size: 4em;
+    border: 1 px solid $colorline;
+    padding: 30px 45px;
+    color: #726659;
+    z-index: -1 !important;
+}
 // Vid 2 : 1h:02
 // hallucinant : après plusieurs manip, le responsive ne fonctionne qu'en important ici ci-dessous
 @import "./desktopresponsive";
