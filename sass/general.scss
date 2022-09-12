@@ -9,6 +9,8 @@
 // ************** formation
 // ************** Parcours
 // ************** Portfolio
+// ************** Other (skills)
+// ************** Hobbies
 
 
 html{
@@ -358,9 +360,38 @@ header .button{
     }
 }
 
+// ************** Other ****************************
+#other-skills {
+    margin-top: 80px;
+    padding: 50px 100px 100px 100px;
+    width: 100%;
+    background-color: $colorbackgroundotherskills;
+    clip-path: polygon(0 11%, 100% 0%, 100% 100%, 0 84%);
+    & h3{
+        transform: rotate(-3.2deg);
+        font-size: 3em;
+        padding-top: 30px;
+        text-shadow: -1px 1px 0px maroon;
+        color:$colorh6parcours;
+    }
+}
+.cloud {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+// ************** Hobbies ****************************
+#hobbies {
+    padding: 250px 50px 100px 50px;
+    margin: -300px 0 -90px 0;
+    clip-path: polygon(0 21%, 100% 31%, 100% 95%, 0 100%);
+}
 
 
-// Vid 2 : 38min 36s
+
+// Vid 2 : 1h:02
 // hallucinant : après plusieurs manip, le responsive ne fonctionne qu'en important ici ci-dessous
 @import "./desktopresponsive";
 
