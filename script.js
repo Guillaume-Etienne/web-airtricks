@@ -1,7 +1,7 @@
 //NAVBAR : faire disparaitre la navbar au scroll
 //typed : pour faire apparaitre et disparaitre du texte / Librairie typed.js
 //COMPTEUR LIVE : pour animer les compteurs des formations
-//Animations des éléments à l'apparition : 
+//Animations des éléments à l'apparition : aos
 
 // *************** libraies : **************
 // compteur : typed.js

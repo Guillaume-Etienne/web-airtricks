@@ -1,4 +1,108 @@
-// general / pages / pages prix
-@media screen and (min-width: 1280px) {
-    
+@media screen and (max-width: 900px) {
+    .info h5, .typed{ // les infos du header
+        font-size: 0.9em;
+    }
+    #langages{
+        margin-left: 1%;
+    }
+    #formation{
+        margin-right: 1%;
+    }
+    .network{
+        font-size: 2em;
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .navbar {
+        display: none !important;  //on fait disparaître la navbar 
+    }          //(important parce qu'on veut passer au dessus de bootstrap
+    .fixed-top{
+        position: unset !important; //navbar tjrs pour ne pas avoir le bandeau
+    }
+    h1{
+        padding-top: 20px;
+    }
+    h1, h2 {
+        font-size: 2em;
+    }
+    #langages {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 50px;
+    }
+    #formation{
+        margin: 210px 0 0 10%;
+        width: 80%;
+        float: none;
+        display: block;
+    }
+    .counter-value{
+        font-size: 1em;
+    }
+    .data-span{
+        font-size: .8em;
+    }
+    #parcours {
+        margin: -150px 0 180px 0;
+        // margin: 640px auto 180px auto;
+        // padding: 40px 30px 100px 30px;
+    }
+    .legende{
+        opacity: 1;
+        & h4{
+            font-size: 1.1em;
+        }
+    }
+    .legende p {    //faire disparaitre la légende des portoflios
+        display: none;        
+    }
+    #portfolio{
+        margin-top:-130px;
+    }
+    #other-skills h3, #hobbies h3, footer h3{
+        font-size: 2em;
+    }
+    .cloud {
+        font-size: 1em;
+    }
+    .flip-box-back p {
+        padding: 10px 0px;
+    }
+    .network{
+        padding: 14px 20px;
+    }
+}
+@media screen and (max-width: 520px){
+    h3{
+        font-size: 1em !important;
+    }
+    #langages {
+        width: 90%;
+        margin-left: 5%;        
+    }
+    #formation{
+        margin: 210px 0 0 5%;
+        width: 90%;
+        float: none;
+        display: block;
+    }
+    .projet:nth-child(2), .projet:nth-child(3){
+        margin-left: 0;
+    }
+    #other-skills {
+        margin: 10px 0 0 0;
+        padding: 50px 20px 80px 20px;
+    }
+    #hobbies{
+        display: none;
+    }
+    footer {
+        // margin-top: -80px;
+        & h3 {
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+    }
 }

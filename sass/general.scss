@@ -451,6 +451,7 @@ footer{
     text-align: center;
     padding: 160px 50px 5;
     & h3{
+        margin-top: 100px;
         padding: 0 0 60px 0;
         font-size: 2.5em;        
     }
@@ -463,10 +464,36 @@ footer{
 }
 .network {
     font-size: 4em;
-    border: 1 px solid $colorline;
+    border: 1px solid $colorline;
     padding: 30px 45px;
     color: #726659;
     z-index: -1 !important;
+    border-radius: 50%;
+    &:hover{
+        background: $colorline;
+        color: $colorlinkhover;
+        transition: all 0.3s ease-in-out;
+    }
+}
+.arrow{
+    width: 50px;
+    margin: 0 auto;
+    padding-top: 15px;
+    animation: arrow linear 1.5s;
+    animation-iteration-count: infinite;
+    & a{
+        font-size: 3em;
+        border: none;
+        color: $colorgreytext1;       
+    }
+    &:hover i{
+        transform: scale(1.6);
+        transition: 0.5s ease-in-out;
+    }
+}
+
+#contact{
+    margin-top: 40px;
 }
 // Vid 2 : 1h:02
 // hallucinant : après plusieurs manip, le responsive ne fonctionne qu'en important ici ci-dessous
