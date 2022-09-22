@@ -28,7 +28,7 @@ window.addEventListener('scroll', function(){
 var typed = new Typed('.typed', {
     strings: ['Ingénieur réseau de formation, je me suis reconverti dans la programmation, développeur web depuis 2ans, C# /ASP / .net depuis 1 an.Spécialisé en intégration de maquettes, dans le développement d’interfaces mobiles et web, je vous accompagne depuis la création de votre site web, sa mise en ligne, son optimisation et évolution dans le temps.'],
     smartBackspace: true, // Default value
-    typeSpeed : 20,
+    typeSpeed : 5,
     loop:false
     });
 

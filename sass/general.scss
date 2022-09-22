@@ -23,6 +23,10 @@ body{
     // important : met en avance ce style (comparé à la masse de styles de bootstrap)
     background-color: $colorbackground !important;
     font-family: 'Rambla', sans-serif;
+    & a:hover{
+        text-decoration: none;
+        color: darkgray;
+    }
 }
 h2, h3{
     font-family: 'Audiowide', sans-serif;
@@ -33,6 +37,7 @@ h2, h3{
 li{
     list-style: none;
 }
+
 
 // ************************* HEADER ***************************
 
@@ -85,32 +90,18 @@ h2{
     justify-content: space-between;
     padding: 20px 0;
 }
-// .photo {
-//     border: 1px solid #b3aca7;
-//     position: relative;    
-// }
-// .photo img {
-//     position: absolute;
-//     top: 0;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//     margin: auto;
-//     height: auto;
-// }
-
-.photo{
+.photo{    
     border: 1px solid $colorline;
-    display: flex;    
-}
-.photo img{    
+    display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 5px;
-    max-width: 90%;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 0 4px #111;
+    padding: 0;  
+}
+.photo img{
+    margin: 20px 0;
+    padding: 1px 0;
+    max-width: 100%;
+    // object-fit: cover;
+    border-radius: 10px;    
 }
 header .button{
     margin-top: 45px;
@@ -130,7 +121,7 @@ header .button{
 // ************************* Langages ***************************
 #langages{
     padding: 80px 110px 80px 50px;
-    margin: 120px 0 0 6%;
+    margin: 50px 0 0 6%;
     height: 620px;
     width: 47%;
     max-width: 640px;
