@@ -143,6 +143,23 @@ header .button{
         letter-spacing: 0.1em;
     }
 }
+#langlist{
+    margin: 40px -50px -150px -50px;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.langpics {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+    & img {
+        width: 100%;
+        max-width: 100px;
+    }
+}
+
+
 // ************************* Formation ***************************
 #formation{
     position: relative;
